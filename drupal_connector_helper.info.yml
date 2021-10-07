@@ -1,0 +1,8 @@
+name: 'Drupal Connector Helper'
+type: module
+description: 'A module to help connect with drupal'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - jwt

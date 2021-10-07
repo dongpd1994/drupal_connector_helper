@@ -1,0 +1,23 @@
+drupal_connector_helper.getListContentType:
+  path: 'api/get-all-content-type'
+  defaults: { _controller: '\Drupal\drupal_connector_helper\Controller\DrupalConnectorController::get_all_content_type' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+drupal_connector_helper.verify:
+  path: 'api/verify'
+  defaults: { _controller: '\Drupal\drupal_connector_helper\Controller\DrupalConnectorController::verify' }
+  methods:  [GET]
+  requirements:
+    _user_is_logged_in: 'TRUE'
+  options:
+    _auth: ['cookie']
+
+drupal_connector_helper.getMediaFields:
+  path: 'api/get-media-fields/{contentType}'
+  defaults: 
+    _controller: '\Drupal\drupal_connector_helper\Controller\DrupalConnectorController::getMediaFields' 
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

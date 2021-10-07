@@ -1,0 +1,6 @@
+services:
+  drupal_connector_helper.login_and_jsonapi_response_listener:
+    class: Drupal\drupal_connector_helper\EventSubscriber\DrupalConnecterEventSubscriber
+    arguments: ['@path.current', '@jwt.authentication.jwt']
+    tags:
+      - { name: event_subscriber }
