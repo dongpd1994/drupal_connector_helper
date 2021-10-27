@@ -3,5 +3,5 @@
 Module Drupal
 
 Need module: 
-- jwt: composer require drupal/jwt
-- key: composer require drupal/key
+- firebase: composer require firebase/php-jwt
+- jwt: composer require 'drupal/jwt:^1.0@RC'
